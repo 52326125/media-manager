@@ -1,4 +1,18 @@
-import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react'
+import { store } from '@/store'
+import { router } from '@/router'
+import { createRoot } from 'react-dom/client'
 
-const root = createRoot(document.body);
-root.render(<h2>Hello from React!</h2>);
+import { Provider } from 'react-redux'
+import { CssBaseline } from '@mui/material'
+import { RouterProvider } from 'react-router-dom'
+
+const root = createRoot(document.getElementById('root'))
+root.render(
+  <StrictMode>
+    <Provider store={store}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </Provider>
+  </StrictMode>
+)

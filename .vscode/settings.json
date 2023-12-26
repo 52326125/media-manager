@@ -1,0 +1,4 @@
+{
+  "cssModules.pathAlias": {},
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
